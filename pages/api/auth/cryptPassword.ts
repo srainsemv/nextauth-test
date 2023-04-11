@@ -13,7 +13,7 @@ export default async function handler(
     const saltRounds = 10;
     const body = JSON.parse(req.body);
 
-    bcrypt.hash(body.password, saltRounds, function(err, hash) {
+    bcrypt.hash(body.password, saltRounds, function(err: string, hash: string) {
         res.status(200).json({ password: hash, error: err })
     });
 }
