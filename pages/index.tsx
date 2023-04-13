@@ -38,27 +38,6 @@ export default function Home() {
                         ):(
                             <></>
                         )
-
-                    }
-                    {
-                        !session &&
-                        <>
-                            <p className="text-2xl">Please Sign in</p>
-
-                            <form onSubmit={HandleSubmit}>
-                                <input
-                                    type="password"
-                                    name="password"
-                                    id="password"
-                                    className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm bg-gray-100 my-4 p-2 ring-1 ring-black"
-                                    placeholder="Password"
-                                />
-
-                                <button className="bg-blue-600 text-white hover:bg-blue-700 py-2 px-6 rounded-md w-full">
-                                    Submit
-                                </button>
-                            </form>
-                        </>
                     }
                 </div>
             </main>
