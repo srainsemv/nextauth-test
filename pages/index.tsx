@@ -29,13 +29,16 @@ export default function Home() {
                 <div>
                     {loading && <div className={styles.title}>Loading...</div>}
                     {
-                        session &&
-                        <>
-                            <p className="my-1">Welcome, {session.user.name}</p>
-                            <p className="">{session.user.email}</p>
-                            <img src={session.user.image} alt="User Avatar" className="h-10 w-10 my-4" />
-                            <p className="">Session expires on {session.expires}</p>
-                        </>
+                        session && session.user ? (
+                            <>
+                                <p className="my-1">Welcome, {session.user.name}</p>
+                                <p className="">{session.user.email}</p>
+                                <p className="">Session expires on {session.expires}</p>
+                            </>
+                        ):(
+                            <></>
+                        )
+
                     }
                     {
                         !session &&
