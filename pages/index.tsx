@@ -7,17 +7,6 @@ export default function Home() {
     const { data: session, status } = useSession()
     const loading = status === "loading"
 
-    async function HandleSubmit(event: any) {
-        event.preventDefault();
-
-        (await fetch("/api/auth/cryptPassword", {
-            method: "POST",
-            body: JSON.stringify({password: event.target.password.value}),
-        })).json().then((data) => {
-            console.log(data.password)
-        });
-    }
-
     return (
         <div className={styles.container}>
             <Head>

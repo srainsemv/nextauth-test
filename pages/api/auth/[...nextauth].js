@@ -1,17 +1,12 @@
-import GoogleProvider from 'next-auth/providers/google';
 import AzureADProvider from "next-auth/providers/azure-ad";
 import NextAuth from "next-auth";
 
 const options = {
     providers: [
-        GoogleProvider({
-            clientId: "480391284884-d1tn3f8i2tsltjdhl6anm2qto8qfb8o9.apps.googleusercontent.com",
-            clientSecret: "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",
-        }),
         AzureADProvider({
-            clientId: process.env.AZURE_AD_CLIENT_ID,
-            clientSecret: process.env.AZURE_AD_CLIENT_SECRET,
-            tenantId: process.env.AZURE_AD_TENANT_ID,
+            clientId: "6b7c9d05-e06a-4e5d-840f-838e04295e1c",
+            clientSecret: "2db8907c-33b1-4726-abbc-f02afcaa995e",
+            tenantId: "91962bb4-066f-4705-8bbd-ff4dd5ca63f6",
         }),
     ],
 }
