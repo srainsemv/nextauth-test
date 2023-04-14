@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <div className={styles.container}>
             <Head>
-                <title>Next Auth Example -</title>
+                <title>Next Auth Example</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
